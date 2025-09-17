@@ -64,7 +64,7 @@ export default function NeslabsLanding() {
       {/* NAV */}
       <header className="sticky top-0 z-40 border-b border-black/10 bg-white/90 backdrop-blur dark:border-white/10 dark:bg-black/60">
         <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
-          <button onClick={() => setPage("home")} className="flex items-center gap-2 text-blue-800 dark:text-blue-300">
+          <button onClick={() => setPage("home")} className="flex items-center gap-2 text-gray-700 dark:text-blue-300">
             <span className="text-2xl font-bold ">
               נֵס
             </span>
