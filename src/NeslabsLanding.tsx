@@ -1,7 +1,7 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
-import { Twitter } from "lucide-react";
+import { Mail, Twitter } from "lucide-react";
 import ReactMarkdown from "react-markdown";
 import type { Components } from "react-markdown";
 import README from "../README.md?raw";
@@ -64,8 +64,8 @@ export default function NeslabsLanding() {
       {/* NAV */}
       <header className="sticky top-0 z-40 border-b border-black/10 bg-white/90 backdrop-blur dark:border-white/10 dark:bg-black/60">
         <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
-          <button onClick={() => setPage("home")} className="flex items-center gap-2">
-            <span className="text-2xl font-bold" style={{ color: "#fff" }}>
+          <button onClick={() => setPage("home")} className="flex items-center gap-2 text-blue-800 dark:text-blue-300">
+            <span className="text-2xl font-bold ">
               נֵס
             </span>
             <span className="hidden sm:inline text-lg tracking-tight font-medium">Neslabs</span>
@@ -83,14 +83,8 @@ export default function NeslabsLanding() {
             >
               Why Neslabs
             </button>
-            <a
-              href="https://x.com/nes_labs"
-              target="_blank"
-              rel="noopener noreferrer"
-              className={`hover:underline ${page === "contact" ? "underline" : ""} flex items-center gap-1`}
-            >
-              <Twitter size={16} />
-            </a>
+
+
           </div>
         </nav>
       </header>
@@ -104,20 +98,45 @@ export default function NeslabsLanding() {
 
       {/* FOOTER */}
       <footer className="mt-auto border-t border-black/10 dark:border-white/10 py-12 px-6">
-        <div className="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between text-sm text-black/70 dark:text-white/70">
-          <div>© {new Date().getFullYear()} Neslabs. All rights reserved.</div>
-          <div className="flex gap-6 mt-4 sm:mt-0">
+        <div className="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between text-sm text-black/70 dark:text-white/70 gap-4">
+
+          {/* Left Section */}
+          <div className="flex items-center gap-4">
+            <span>
+              © {new Date().getFullYear()} Neslabs. All rights reserved.
+            </span>
+            <a
+              href="mailto:build@neslabs.io"
+              className="hover:text-black dark:hover:text-white transition-colors"
+            >
+              <Mail size={16} />
+            </a>
+            <a
+              href="https://x.com/nes_labs"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`flex items-center gap-1 hover:underline ${
+                page === "contact" ? "underline" : ""
+              }`}
+            >
+              <Twitter size={16} />
+            </a>
+          </div>
+
+          {/* Right Section */}
+          <div className="flex gap-6">
             <a
               href="https://explorer.sui.io/address/0xa35de887586ac1a9e644bc8f1b24a0d54c6eea66b8feef8bfd94297adde8d479?network=mainnet"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-3 py-1 border border-black dark:border-white rounded-md hover:bg-neutral-100 dark:hover:bg-neutral-900"
+              className="px-3 py-1 border border-black/20 dark:border-white/20 rounded-md hover:bg-neutral-100 dark:hover:bg-neutral-900 transition-colors"
             >
               Buy us a coffee (SUI)
             </a>
           </div>
         </div>
       </footer>
+
     </div>
   );
 }
