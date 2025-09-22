@@ -126,7 +126,7 @@ export default function NeslabsLanding() {
           {/* Right Section */}
           <div className="flex gap-6">
             <a
-              href="https://explorer.sui.io/address/0xa35de887586ac1a9e644bc8f1b24a0d54c6eea66b8feef8bfd94297adde8d479?network=mainnet"
+              href="https://explorer.sui.io/address/@neslabs?network=mainnet"
               target="_blank"
               rel="noopener noreferrer"
               className="px-3 py-1 border border-black/20 dark:border-white/20 rounded-md hover:bg-neutral-100 dark:hover:bg-neutral-900 transition-colors"
