@@ -12,7 +12,7 @@ function App() {
   return (
     <Layout page={page} setPage={setPage}>
       {page === "home" && (
-        <HomeSection onGoProjects={() => setPage("projects")} onGoContact={() => setPage("contact")} />
+        <HomeSection />
       )}
       {page === "projects" && <ProjectsPage />}
       {page === "why" && <WhyPage />}

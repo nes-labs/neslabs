@@ -1,12 +1,7 @@
 import { motion } from "framer-motion";
 import { ProjectCard } from "../components/shared/ProjectCard";
 
-type HomeSectionProps = {
-  onGoProjects: () => void;
-  onGoContact: () => void;
-};
-
-export function HomeSection({ onGoProjects, onGoContact }: HomeSectionProps) {
+export function HomeSection() {
   return (
     <>
       {/* HERO */}
